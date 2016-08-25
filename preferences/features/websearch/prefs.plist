@@ -191,7 +191,7 @@
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>stackoverflow</string>
+			<string>sof</string>
 			<key>text</key>
 			<string>Search StackOverflow for '{query}'</string>
 			<key>url</key>
@@ -261,6 +261,19 @@
 			<string>https://pixabay.com</string>
 			<key>url</key>
 			<string>https://pixabay.com</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9C63CED0-AE82-416A-B2BB-FFFD556D83E0</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>icon</string>
+			<key>text</key>
+			<string>iconfont</string>
+			<key>url</key>
+			<string>http://www.iconfont.cn</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
