@@ -368,6 +368,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>C60FF693-BF60-44C7-95B2-D8FF6B796418</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>bdt</string>
+			<key>text</key>
+			<string>Baidu translate</string>
+			<key>url</key>
+			<string>https://fanyi.baidu.com/#en/zh/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>CC97E8D3-2DB9-4C98-B37B-C566DDF5F952</key>
 		<dict>
 			<key>enabled</key>
