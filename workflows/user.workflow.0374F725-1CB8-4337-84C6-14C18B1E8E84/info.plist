@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.jemesl.color</string>
+	<key>connections</key>
+	<dict>
+		<key>5448725B-0201-4DB4-96C7-E8EC09FDCDA4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B85832C1-EDC4-4E92-9F88-148F494FDE22</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>jemesl</string>
+	<key>description</key>
+	<string>把十进制 转换为16进制</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>color 进制转换</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B85832C1-EDC4-4E92-9F88-148F494FDE22</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>color</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>。。。</string>
+				<key>script</key>
+				<string>'''
+Author : Jemesl
+
+'''
+import re
+import string
+
+originStr = unicode('{query}');
+newStr = originStr.strip();
+arr = re.split(" ", newStr);
+result = '#';
+for str in arr:
+ numtext = str.encode('utf-8').translate(None, "\\");
+ num = string.atoi(numtext);
+ numStrHex = hex(num);
+ numtext = numStrHex.encode('utf-8').translate(None, "0x");
+ result += numtext;
+
+resultUpper = result.upper();
+resultLower = result.lower();
+desc = '回车即可复制到剪切板'
+
+print '&lt;?xml version="1.0"?&gt;&lt;items&gt;&lt;item uid="desktop" arg="' + resultUpper + '" valid="yes"&gt;&lt;title&gt;' + resultUpper + '&lt;/title&gt;&lt;subtitle&gt;' + desc +'&lt;/subtitle&gt;&lt;icon&gt;color.png&lt;/icon&gt;&lt;/item&gt;&lt;item uid="desktop1" arg="' + resultLower + '" valid="yes"&gt;&lt;title&gt;' + resultLower + '&lt;/title&gt;&lt;subtitle&gt;'+ desc+'&lt;/subtitle&gt;&lt;icon&gt;color.png&lt;/icon&gt;&lt;/item&gt;&lt;/items&gt;'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>输出十六进制 color</string>
+				<key>title</key>
+				<string>输入十进制 color</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5448725B-0201-4DB4-96C7-E8EC09FDCDA4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>5448725B-0201-4DB4-96C7-E8EC09FDCDA4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>120</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>B85832C1-EDC4-4E92-9F88-148F494FDE22</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
