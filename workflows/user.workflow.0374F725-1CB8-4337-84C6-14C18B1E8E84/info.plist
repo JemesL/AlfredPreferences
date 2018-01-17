@@ -40,7 +40,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>color</string>
+				<string>c</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -67,10 +67,9 @@ for str in arr:
  numtext = str.encode('utf-8').translate(None, "\\");
  num = string.atoi(numtext);
  numStrHex = hex(num);
-
- numtext = numStrHex.encode('utf-8').translate(None, "0x");
+ numtext = numStrHex.replace('0x','');
  if len(numtext) &lt; 2 :
-  numtext = '0' + numtext;
+   numtext = '0' + numtext;
  result += numtext;
 
 resultUpper = result.upper();
