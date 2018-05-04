@@ -355,6 +355,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>C45CDFB7-7FD6-44B2-9682-985884E8FAEF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gmap</string>
+			<key>text</key>
+			<string>Search Google Map for '{query}'</string>
+			<key>url</key>
+			<string>https://www.google.com.pe/maps/search/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>C4A031BC-1F73-4A1D-9C2B-5957FC30E1F6</key>
 		<dict>
 			<key>enabled</key>
