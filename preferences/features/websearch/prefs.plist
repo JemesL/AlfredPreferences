@@ -290,6 +290,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>A8BA8774-DD08-4217-8078-780655CD09F1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gh</string>
+			<key>text</key>
+			<string>Github</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}&amp;ref=opensearch</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>AA7DDD92-6786-4264-95F2-1C073355ACE8</key>
 		<dict>
 			<key>enabled</key>
